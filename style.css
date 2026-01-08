@@ -1,0 +1,119 @@
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: #FFF8E1;
+    margin: 0;
+    color: #333;
+}
+
+.app-header {
+    background: linear-gradient(135deg, #D32F2F, #B71C1C);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.app-header h1 { margin: 0; font-size: 1.8rem; }
+.app-header p { margin: 5px 0 0; opacity: 0.9; }
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr; /* মোবাইলের জন্য এক কলাম */
+    gap: 20px;
+}
+
+/* গল্পের কার্ড */
+.story-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    border: 2px solid transparent;
+}
+
+.story-card:hover {
+    transform: translateY(-3px);
+    border-color: #FFD700;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-right: 20px;
+    background: #FFECB3;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.card-info h3 { margin: 0 0 5px; color: #B71C1C; }
+.card-info p { margin: 0; font-size: 0.9rem; color: #666; }
+
+/* মোডাল */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: popUp 0.3s ease-out;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #999;
+}
+
+.story-icon {
+    text-align: center;
+    font-size: 4rem;
+    margin: 10px 0;
+}
+
+.moral-box {
+    background: #E8F5E9;
+    border-left: 5px solid #4CAF50;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
